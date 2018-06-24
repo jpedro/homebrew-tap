@@ -1,4 +1,4 @@
-cask '1password' do
+cask '1password6' do
   if MacOS.version <= :lion
     version '3.8.22'
     sha256 '3afd75f1bddf791dc7dbc9a7d92ab6eb91ee891407d750cedb7b5aff5fe8bf17'
