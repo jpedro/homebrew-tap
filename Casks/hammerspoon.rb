@@ -1,6 +1,6 @@
 cask "hammerspoon" do
   app "Hammerspoon.app"
-  name "Hammerspoon application"
+  name "Hammerspoon window mananger and automation tool"
   homepage "https://www.hammerspoon.org/"
 
   version "0.9.3"
