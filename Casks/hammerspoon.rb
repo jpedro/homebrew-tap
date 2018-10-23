@@ -1,6 +1,6 @@
-cask "hammperspoon" do
-  app "Hammperspoon.app"
-  name "Hammperspoon application"
+cask "hammerspoon" do
+  app "Hammerspoon.app"
+  name "Hammerspoon application"
   homepage "https://www.hammerspoon.org/"
 
   version "0.9.3"
