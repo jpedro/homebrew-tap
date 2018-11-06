@@ -3,7 +3,7 @@ class Chartmuseum < Formula
   homepage "https://github.com/helm/chartmuseum"
   url "https://s3.amazonaws.com/chartmuseum/release/latest/bin/darwin/amd64/chartmuseum"
   version "v0.7.1"
-  sha256 "a1a38e0c9c26495f833c80c47c7a501df8394f447ea481d9fa01e048d8e5a9b8"
+  sha256 "f59c0f0b9aa2d3421dfc77826c075d2c9ef059d88bde5a74c3c5e0c3c10c66de"
 
   def install
     bin.install "chartmuseum"
