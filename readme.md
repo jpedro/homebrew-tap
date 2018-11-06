@@ -6,5 +6,5 @@ Extra packages for homebrew.
 
 ```
 brew tap jpedro/tap
-brew install ptdorf/jpedro/git-commitment
+brew install jpedro/tap/git-commitment
 ```
