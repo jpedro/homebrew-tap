@@ -2,7 +2,7 @@ class Provctl < Formula
   desc "Random messages for your commits"
   homepage ""
   url "https://nc-provisioner-cli.s3-eu-west-1.amazonaws.com/unsigned-mac-os-binary/osx/provctl"
-  sha256 "0fed7dfdd11ba3548825f79281265ac4c3faee0f818c262e98fe9838b7908f75"
+  sha256 "8960b663261fe86a197c2903c84c9dc11b59a90b2101041f09d7df6908cc6e32"
   version "v2.19"
 
   def install
