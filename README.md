@@ -1,6 +1,7 @@
 # homebrew-tap
 
-Extra packages for homebrew.
+My brew custom tap.
+
 
 ### Installation
 
