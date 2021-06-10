@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+### Adapted (and simplified) from https://github.com/ngerakines/commitment
 line = DATA.readlines.sample
 name = ['Nick', 'Andy', 'Steve', 'Sarah', 'Jason', 'Todd'].sample
 puts line.sub('{{Name}}', name).sub('{{UPPER}}', name.upcase)
