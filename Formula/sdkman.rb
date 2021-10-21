@@ -3,7 +3,7 @@ class Sdkman < Formula
   homepage "https://sdkman.io"
   url "https://get.sdkman.io"
   version "0.1.0"
-  sha256 "288881d89ba3910234e275190e7d14d42bf41d9e119adc428ab984fe00cf9130"
+  sha256 "fe442281b11e3a87072cf4edfafa3e9260fc5a79dc46d8950ed961e545392229"
 
   def install
     bin.install
