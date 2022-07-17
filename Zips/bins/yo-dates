@@ -2,3 +2,4 @@
 set -euo pipefail
 
 echo "From yo-dates"
+date
