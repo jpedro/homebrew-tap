@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+PROG="$(basename $0))"
+NAME="${1:-}"
+if [ "$NAME" == "" ]
+then
+    echo "Usage: $PROG <NAME>"
+fi
+
+cd Zips/$NAME
+rm -f ../$NAME.zip
+zip -r ../$NAME.zip .
+cd ..
+unzip -t $NAME.zip
