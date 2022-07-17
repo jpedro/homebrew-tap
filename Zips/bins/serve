@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+import os
+import sys
+import urllib.parse
+from http.server import SimpleHTTPRequestHandler, HTTPServer
+
+def green(text):
+    return f"\033[32;1m{text}\033[0m"
+
+class Handler(SimpleHTTPRequestHandler):
+
+    def do_GET(self):
+        parts = urllib.parse.urlparse(self.path)
+        path = parts.path.strip("/")
+        print(green(f"==> GET {path}"))
+
+        if path == "":
+            self.path = "index.html"
+        elif not os.path.exists(path):
+            print(green(f"==> Not found '{path}'. Using index.html"))
+            self.path = "index.html"
+
+        return SimpleHTTPRequestHandler.do_GET(self)
+
+
+host = "127.0.0.1"
+port = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
+
+try:
+    server = HTTPServer((host, port), Handler)
+    print(green(f"==> Listening on http://{host}:{port}"))
+    server.serve_forever()
+
+except KeyboardInterrupt:
+    print("\n==> Stopped")

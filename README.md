@@ -1,11 +1,11 @@
 # homebrew-tap
 
-My brew custom tap.
+My custom brew packages.
 
 
 ### Installation
 
 ```
 brew tap jpedro/tap
-brew install jpedro/tap/git-commitment
+brew install jpedro/tap/bins
 ```
