@@ -13,3 +13,4 @@ rm -f ../$NAME.zip
 zip -r ../$NAME.zip .
 cd ..
 unzip -t $NAME.zip
+sha256sum $NAME.zip
