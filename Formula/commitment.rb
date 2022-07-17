@@ -6,11 +6,11 @@ class Commitment < Formula
   version "0.1.1"
 
   def install
-    bin.install "git-commitment"
+    bin.install "commitment"
   end
 
   test do
     # assert shell_output("git commitment").length > 0
-    system "git commitment"
+    system "commitment"
   end
 end
