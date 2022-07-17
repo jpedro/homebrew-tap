@@ -1,5 +1,5 @@
 class Bins < Formula
-  desc "Test formula"
+  desc "Utility cli tools"
   homepage "https://github.com/jpedro/homebrew-tap"
   url "https://raw.githubusercontent.com/jpedro/homebrew-tap/master/Zips/bins.zip"
   version "0.1.1"
