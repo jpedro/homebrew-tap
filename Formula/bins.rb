@@ -3,7 +3,7 @@ class Bins < Formula
   homepage "https://github.com/jpedro/homebrew-tap"
   url "https://raw.githubusercontent.com/jpedro/homebrew-tap/master/Zips/bins.zip"
   version "0.1.1"
-  sha256 "50c897bf0d489967d5eaf4616c8c7a8851c054690cbedb550884412952aeed56"
+  sha256 "83ecf992550b632672533e5114aeef3d345c892901c997da1d0a839fef4ed376"
   license "MIT"
 
   def install
