@@ -2,7 +2,7 @@ class Commitment < Formula
   desc "Commit messages that pop!"
   homepage "https://github.com/jpedro/homebrew-tap"
   url "https://raw.githubusercontent.com/jpedro/homebrew-tap/master/bin/commitment"
-  sha256 "0fed7dfdd11ba3548825f79281265ac4c3faee0f818c262e98fe9838b7908f75"
+  sha256 "274c7e85f00efcbeece7c3450fc49050a9d92f293e2a6b1010b0c33a84d6d15e"
   version "0.1.1"
 
   def install
