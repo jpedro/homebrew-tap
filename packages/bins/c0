@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+blocks() {
+    local type=""
+    local row=""
+    local col=""
+    local sep="    "
+
+    echo
+    for type in {3..3}
+    do
+        for height in {0..3}
+        do
+            echo -n "$sep"
+            for col in $(seq 0 7)
+            do
+                [[ "$type" == "3" ]] && text="██████" || text="     "
+                local extra=""
+                local bold=""
+                if [[ "$height" > 1 ]]
+                then
+                    bold="m"
+                else
+                    bold=";1m"
+                fi
+                printf "\033[$type$col$bold$text\033[0m"
+            done
+            echo
+        done
+    done
+}
+
+both() {
+    local bold=""
+    local row=""
+    local text=""
+    local fg=""
+
+    for bold in '' ';1'
+    do
+        printf "    "
+        for row in {0..7}
+        do
+            printf "\033[3${row}${bold}m   3$row   \033[0m"
+        done
+        echo
+    done
+
+    echo
+    for height in {0..2}
+    do
+        printf "    "
+        for row in {0..7}
+        do
+            [ $height -eq 1 ] && text="4$row" || text="  "
+            [ $row -eq 7 ] && fg=";38;5;232" || fg=""
+            printf "\033[4${row}${fg}${bold}m   $text   \033[0m"
+        done
+        echo
+    done
+}
+
+# both
+blocks

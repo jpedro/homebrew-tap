@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 import os
 import sys
-import urllib.parse
+
+from urllib.parse import urlparse
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 
 VERSION = "0.1.0"
@@ -12,14 +13,14 @@ def green(text):
 class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
-        parts = urllib.parse.urlparse(self.path)
+        parts = urlparse(self.path)
         path = parts.path.strip("/")
         print(green(f"==> GET {path}"))
 
         if path == "":
             self.path = "index.html"
         elif not os.path.exists(path):
-            print(green(f"==> Not found '{path}'. Using index.html"))
+            print(green(f"==> Path not found '{path}'. Using index.html"))
             self.path = "index.html"
 
         return SimpleHTTPRequestHandler.do_GET(self)

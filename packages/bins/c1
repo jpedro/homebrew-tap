@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# TEXT="${1:-gYw}"
+TEXT="${1:-date}"
+LEN="${#TEXT}"
+[ $LEN -lt 2 ] && LEN=2
+
+printf "          %${LEN}s " ""
+for bg in {40..47}
+do
+    printf "  %${LEN}s   " "$bg"
+done
+echo
+
+for row in '0' '30' '31' '32' '33' '34' '35' '36' '37'
+do
+    printf " %4s \033[${row}m  %${LEN}s  " "$row" "$TEXT"
+    for col in {40..47}
+    do
+        printf " \033[${row};${col}m  %${LEN}s  \033[0m" "$TEXT"
+    done
+    echo
+
+    if [ "$row" == "0" ]
+    then
+        text="1"
+    else
+        text="1;$row"
+    fi
+    printf " %4s \033[${row};1m  %${LEN}s  " "" "$TEXT"
+    for col in {40..47}
+    do
+        printf " \033[${row};${col};1m  %${LEN}s  \033[0m" "$TEXT"
+    done
+    echo
+done
+echo

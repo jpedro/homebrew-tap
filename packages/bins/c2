@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+TEXT="${1:-Blah}"
+SEP=" "
+echo -en "\n$SEP"
+for row in {0..39}
+do
+    for col in {0..5}
+    do
+        color=$(( 16 + $row * 6 + $col ))
+        printf "\033[38;5;%s;1m  %3s  " $color $color
+    done
+    echo -en "\033[0m$SEP$SEP$SEP$SEP"
+    for col in {0..5}
+    do
+        color=$(( 16 + $row * 6 + $col ))
+        fg=""
+        mod=$((($color + 2) % 36))
+        if [ $mod -ge 0 ] && [ $mod -le 17 ]
+        then
+            fg="38;5;232;"
+        elif [ $color -ge 247 ]
+        then
+            fg="38;5;232;"
+        fi
+
+        printf "\033[${fg}48;5;%s;1m  %3s  " $color $color
+    done
+    echo -en "\033[0m\n$SEP"
+done
+echo -e "\033[0m"

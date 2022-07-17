@@ -9,7 +9,7 @@ then
     exit 1
 fi
 
-cd Zips/$NAME
+cd packages/$NAME
 rm -f ../$NAME.zip
 zip -r ../$NAME.zip .
 cd ..

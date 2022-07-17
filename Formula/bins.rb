@@ -11,6 +11,11 @@ class Bins < Formula
         bin.install "repos"
         bin.install "commitment"
         bin.install "serve"
+        bin.install "c0"
+        bin.install "c1"
+        bin.install "c2"
+        bin.install "c3"
+        bin.install "c4"
     end
 
     test do
