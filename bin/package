@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROG="$(basename $0))"
+PROG="$(basename $0)"
 NAME="${1:-}"
 if [ "$NAME" == "" ]
 then
     echo "Usage: $PROG <NAME>"
+    exit 1
 fi
 
 cd Zips/$NAME
