@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""
+SYNPOSIS
+    mycli [NAME]            # Used the named connection
+    mycli [NAME]            # Used the named connection
+"""
+import os
+import sys
+import yaml
+import getpass
+
+VERSION = "0.1.0"
+
+class MyCli:
+
+    def __init__(self, dir: str):
+        self.dir = dir
+
+
+    def start(self, name: str):
+        file = f"{self.dir}/{name}.yaml"
+        if os.path.isfile(file):
+            self.connect(file)
+        else:
+            self.create(file)
+
+
+    def connect(self, file: str):
+        with open(file, "r") as f:
+            data = yaml.safe_load(f)
+
+        if data["driver"] == "mysql":
+            self.mysql(data)
+
+        if data["driver"] in ["postgres", "pgsql", "psql", "postgresql"]:
+            self.pgsql(data)
+
+
+    def create(self, file: str):
+        os.system(f"mkdir -p {self.dir}")
+        print(f"Creating {file}...")
+        driver = input("Enter driver: ")
+        host = input("Enter host: ")
+        username = input("Enter username: ")
+        password = getpass.getpass("Enter password: ")
+        database = input("Enter database: ")
+        data = {
+            "driver": driver,
+            "host": host,
+            "username": username,
+            "password": password,
+            "database": database,
+        }
+
+        with open(file, "w") as f:
+            yaml.dump(data, f)
+        print(f"Created {file}")
+        self.connect(file)
+
+
+    def mysql(self, data):
+        args = []
+        args.append("mysql")
+        args.append(f"--user={data['username']}")
+        args.append(f"--password={data['password']}")
+        args.append(f"{data['database']}")
+        cmd = " ".join(args)
+        os.system(f"exec {cmd}")
+
+    def pgsql(self, data):
+        args = []
+        args.append(f"PGPASSWORD={data['password']}")
+        args.append("psql")
+        args.append(f"--username={data['username']}")
+        args.append(f"{data['database']}")
+        cmd = " ".join(args)
+        os.system(f"exec {cmd}")
+
+
+def main():
+    if len(sys.argv) < 2:
+        name = "default"
+        args = []
+    else:
+        name = sys.argv[1]
+        args = sys.argv[1:]
+
+    if name == "--version":
+        print(VERSION)
+        exit(0)
+
+    if name == "--help":
+        print(__doc__)
+        exit(0)
+
+    dir = os.path.expanduser("~/.config/mycli")
+    cli = MyCli(dir)
+
+    try:
+        # call = getattr(cli, f"{name}Cmd")
+        cli.start(name)
+
+    except Exception as e:
+        print(f"Error: {str(e)}.")
+        raise
+
+
+if __name__ == "__main__":
+    main()

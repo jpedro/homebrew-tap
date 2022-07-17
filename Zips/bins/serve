@@ -4,6 +4,8 @@ import sys
 import urllib.parse
 from http.server import SimpleHTTPRequestHandler, HTTPServer
 
+VERSION = "0.1.0"
+
 def green(text):
     return f"\033[32;1m{text}\033[0m"
 

@@ -10,14 +10,12 @@ class Bins < Formula
     def install
         bin.install "repos"
         bin.install "commitment"
-        bin.install "yo-dates"
-        bin.install "yo-datex"
+        bin.install "serve"
     end
 
     test do
         system "repos" "version"
         system "commitment"
-        system bin/"yo-dates"
-        system bin/"yo-datex"
+        system "serve"
     end
 end
