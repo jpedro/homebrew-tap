@@ -854,10 +854,6 @@ def main():
         if showTimer:
             print(f"\n  {COLOR_PALE}Took {(done * 1000):0.0f} ms{COLOR_RESET}", file=sys.stderr)
 
-    # except AttributeError as e:
-    #     print(f"Error: Command '{cmd}' not found. Try '{PROGRAM} help'.")
-    #     exit(1)
-
     except Exception as e:
         print(f"Error: `{e}`.", file=sys.stderr)
         raise
