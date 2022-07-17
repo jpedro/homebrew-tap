@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+git pp
+
+brew uninstall jpedro/tap/bins
+brew update
+brew install jpedro/tap/bins
+
+yo-datex
+yo-dates
