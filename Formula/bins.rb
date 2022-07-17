@@ -2,7 +2,9 @@ class Bins < Formula
   desc "Utility cli tools"
   homepage "https://github.com/jpedro/homebrew-tap"
   url "https://github.com/jpedro/homebrew-tap"
-#   sha256 "e59c4cc9dfccb7d52b9ff714b726ceee694cfa389474cbe01a65c5f9bc13eca4"
+  url "https://raw.githubusercontent.com/jpedro/homebrew-tap/master/Zips/bins.zip"
+
+  #   sha256 "e59c4cc9dfccb7d52b9ff714b726ceee694cfa389474cbe01a65c5f9bc13eca4"
 
   # bottle :unneeded
 
