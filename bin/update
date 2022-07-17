@@ -3,7 +3,7 @@ set -xeuo pipefail
 
 git pp
 
-brew uninstall jpedro/tap/bins
+brew uninstall jpedro/tap/bins || echo "Skipping"
 brew update
 brew install jpedro/tap/bins
 
