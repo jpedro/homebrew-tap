@@ -31,3 +31,4 @@ do
     echo -en "\033[0m\n$SEP"
 done
 echo -e "\033[0m"
+# echo "    -- Foreground and background next to each other"

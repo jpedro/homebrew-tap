@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-blocks() {
+cmd.blocks() {
     local type=""
     local row=""
     local col=""
@@ -31,12 +31,13 @@ blocks() {
     done
 }
 
-both() {
+cmd.both() {
     local bold=""
     local row=""
     local text=""
     local fg=""
 
+    echo
     for bold in '' ';1'
     do
         printf "    "
@@ -61,5 +62,6 @@ both() {
     done
 }
 
-# both
-blocks
+CMD="${1:-blocks}"
+cmd.$CMD
+# blocks

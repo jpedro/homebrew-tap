@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# TEXT="${1:-gYw}"
-TEXT="${1:-date}"
+TEXT="${1:-Date}"
 LEN="${#TEXT}"
 [ $LEN -lt 2 ] && LEN=2
 
