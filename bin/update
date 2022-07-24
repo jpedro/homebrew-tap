@@ -2,12 +2,12 @@
 set -xeuo pipefail
 
 git pp
-surge Zips jpedro-bins.surge.sh
+surge packages https://jpedro-bins.surge.sh
 
 rm -f /Users/pedro/Library/Caches/Homebrew/downloads/6b6e88d49edafaf4b51d7a611a7d283df4d7393a8063633c05e10cae0b188f86--bins.zip
 brew uninstall jpedro/tap/bins || echo "Skipping"
 brew update
 brew install jpedro/tap/bins
 
-yo-datex
-yo-dates
+c1
+c0
