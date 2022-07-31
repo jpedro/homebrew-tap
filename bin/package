@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROG="$(basename $0)"
-NAME="${1:-}"
+NAME="${1:-bins}"
 if [ "$NAME" == "" ]
 then
     echo "Usage: $PROG <NAME>"

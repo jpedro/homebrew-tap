@@ -4,7 +4,7 @@ class Bins < Formula
     # url "https://raw.githubusercontent.com/jpedro/homebrew-tap/master/Zips/bins.zip"
     url "https://jpedro-bins.surge.sh/bins.zip"
     version "0.1.3"
-    sha256 "52f11f04f42f27a76e9970de77fbeb5782bad80543a8bcc9ed7fb1440643eeca"
+    sha256 "eabb9064c0391f02cdabcae1729405a3c75d802f2a7fcc925cb941322efa7122"
     license "MIT"
 
     def install

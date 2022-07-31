@@ -223,6 +223,8 @@ class Repo:
                 self.icon = ""
             elif "git@gitlab.com:" in self.url:
                 self.icon = ""
+            elif "git.heroku.com/" in self.url:
+                self.icon = "\ue77b"
 
         if self.upstream:
             cmd = f"git rev-list --count --left-right {self.upstream}...HEAD"
