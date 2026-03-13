@@ -1,4 +1,4 @@
-cask "hammerspoon" do
+cask "hammer" do
   app "Hammerspoon.app"
   name "Hammerspoon window mananger and automation tool"
   homepage "https://www.hammerspoon.org/"
