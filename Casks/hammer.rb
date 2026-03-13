@@ -2,6 +2,7 @@ cask "hammer" do
   app "Hammerspoon.app"
   name "[OLD] Hammerspoon window mananger"
   homepage "https://www.hammerspoon.org/"
+  description "Yeah, you \033[31;1mREALLY\033[0m should not use this"
 
   version "0.9.100"
   url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
