@@ -1,12 +1,11 @@
 cask "hammer" do
-  app "Hammerspoon.app"
-  name "[OLD] Hammerspoon window mananger"
-  homepage "https://www.hammerspoon.org/"
-  desc "Yeah, you \033[31;1mREALLY\033[0m should not use this"
-
-  version "0.9.100"
-  url "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
-  sha256 "c13c95c1c4bca7937aedea6c90d95642865c90ebdfddf6377cd7a83db9007d17"
+  app       "Hammerspoon.app"
+  name      "[OLD] Hammerspoon window mananger"
+  desc      "Yeah, you \033[31;1mREALLY\033[0m should not use this"
+  homepage  "https://www.hammerspoon.org/"
+  version   "0.9.100"
+  url       "https://github.com/Hammerspoon/hammerspoon/releases/download/#{version}/Hammerspoon-#{version}.zip"
+  sha256    "c13c95c1c4bca7937aedea6c90d95642865c90ebdfddf6377cd7a83db9007d17"
 
   auto_updates true
 end
