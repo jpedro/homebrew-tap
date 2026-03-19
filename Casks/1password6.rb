@@ -25,9 +25,10 @@ cask '1password6' do
     app "1Password #{version.major}.app"
   end
 
-  appcast 'https://app-updates.agilebits.com/product_history/OPM4',
-          checkpoint: 'eb8b60476f30a53f496a84e809b948faf81ea9f9ab442f4c923e48720e5a1f2a'
-  name '1Password'
+  # appcast 'https://app-updates.agilebits.com/product_history/OPM4',
+  #         checkpoint: 'eb8b60476f30a53f496a84e809b948faf81ea9f9ab442f4c923e48720e5a1f2a'
+
+  name '1Password6'
   homepage 'https://1password.com/'
 
   auto_updates true
